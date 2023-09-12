@@ -15,14 +15,14 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
 
 
   // Add Import button
-  Panels.addButton('options', {
-    id: cmdImportMjml,
-    command: cmdImportMjml,
-    attributes: { title: getI18nLabel('import') },
-    label: `<svg ${iconStyle} viewBox="0 0 24 24">
-        <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
-    </svg>`,
-  });
+  // Panels.addButton('options', {
+  //   id: cmdImportMjml,
+  //   command: cmdImportMjml,
+  //   attributes: { title: getI18nLabel('import') },
+  //   label: `<svg ${iconStyle} viewBox="0 0 24 24">
+  //       <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+  //   </svg>`,
+  // });
 
   // Add Undo/Redo buttons
   Panels.addButton('options', {

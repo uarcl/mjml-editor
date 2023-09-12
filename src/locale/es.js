@@ -39,6 +39,7 @@ export default {
         spacer: 'Separador',
         text: 'Texto',
         wrapper: 'Envoltura',
+        uarFooter: 'Footer UAR',
       },
     }
   },

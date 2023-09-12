@@ -27,7 +27,7 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M2 20h20V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Z"/>
     </svg>`,
-    content: `<mj-section>
+    content: `<mj-section background-color="#ffffff">
         <mj-column><mj-text>Content 1</mj-text></mj-column>
       </mj-section>`,
   });
@@ -37,7 +37,7 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     media: `<svg viewBox="0 0 23 24">
       <path fill="currentColor" d="M2 20h8V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM13 20h8V4h-8v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1Z"/>
     </svg>`,
-    content: `<mj-section>
+    content: `<mj-section background-color="#ffffff">
       <mj-column><mj-text>Content 1</mj-text></mj-column>
       <mj-column><mj-text>Content 2</mj-text></mj-column>
     </mj-section>`,
@@ -48,7 +48,7 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     media: `<svg viewBox="0 0 23 24">
       <path fill="currentColor" d="M2 20h4V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM17 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1ZM9.5 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1Z"/>
     </svg>`,
-    content: `<mj-section>
+    content: `<mj-section background-color="#ffffff">
         <mj-column><mj-text>Content 1</mj-text></mj-column>
         <mj-column><mj-text>Content 2</mj-text></mj-column>
         <mj-column><mj-text>Content 3</mj-text></mj-column>
@@ -69,7 +69,7 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
     </svg>`,
-    content: '<mj-button>Button</mj-button>',
+    content: '<mj-button background-color="#3a2562">Button</mj-button>',
   });
 
   addBlock('mj-image', {
@@ -89,21 +89,21 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     content: '<mj-divider/>',
   });
 
-  addBlock('mj-social-group', {
-    label: getI18nLabel('socialGroup'),
-    media: socialIcon,
-    content: `<mj-social font-size="12px" icon-size="24px" border-radius="12px" mode="horizontal">
-        <mj-social-element name="facebook"></mj-social-element>
-        <mj-social-element name="google"></mj-social-element>
-        <mj-social-element name="twitter"></mj-social-element>
-      </mj-social>`,
-  });
+  // addBlock('mj-social-group', {
+  //   label: getI18nLabel('socialGroup'),
+  //   media: socialIcon,
+  //   content: `<mj-social font-size="12px" icon-size="24px" border-radius="12px" mode="horizontal">
+  //       <mj-social-element name="facebook"></mj-social-element>
+  //       <mj-social-element name="google"></mj-social-element>
+  //       <mj-social-element name="twitter"></mj-social-element>
+  //     </mj-social>`,
+  // });
 
-  addBlock('mj-social-element', {
-    label: getI18nLabel('socialElement'),
-    media: socialIcon,
-    content: '<mj-social-element name="facebook" />',
-  });
+  // addBlock('mj-social-element', {
+  //   label: getI18nLabel('socialElement'),
+  //   media: socialIcon,
+  //   content: '<mj-social-element name="facebook" />',
+  // });
 
   addBlock('mj-spacer', {
     label: getI18nLabel('spacer'),
@@ -169,22 +169,39 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
       </mj-section>
     </mj-wrapper>`,
   });
-
-  addBlock('mj-raw', {
-    label: getI18nLabel('raw'),
-    media: `<svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
-    </svg>`,
-    content: `<mj-raw>
-      <div class="container">
-        <img class="item" src="https://source.unsplash.com/random/200x141" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x142" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x143" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x144" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x145" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x146" alt="Example image">
-      </div>
-    </mj-raw>`,
-  });
+  addBlock('mj-uar-footer', {
+    label: getI18nLabel('uarFooter'),
+    media: socialIcon,
+    content: `<mj-section background-color="#5708b2">
+    <mj-column width="65%"  padding-top="0" padding-right="0" padding-bottom="10px"  padding-left="10px">
+      <mj-text padding-top="0" padding-left="10px" padding-bottom="5px" text-decoration="none" color="#fff" font-family="Helvetica" font-size="16px" font-style="italic" font-weight="bold">Sé parte de nuestra comunidad</mj-text>
+      <mj-text padding-top="0" padding-left="10px" padding-bottom="5px" text-decoration="none" color="#fff" font-family="Helvetica"><a style="color:#fff;text-decoration:none;" href="https://www.uar.cl/@TrackLink">www.uar.cl</a></mj-text>
+      <mj-text padding-top="0" padding-left="10px" padding-bottom="5px" text-decoration="none" color="#fff" font-family="Helvetica"><a style="color:#fff;text-decoration:none;" href="mailto:info@uarecoleta.cl">info@uarecoleta.cl</a></mj-text>
+      
+    </mj-column>
+    <mj-group width="35%">
+      <mj-column vertical-align="middle" width="21%" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="12px">
+        <mj-image src="https://correos.uar.cl/uploads/facebook_icon_internal.png" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0" width="32px" height="auto" href="https://www.facebook.com/universidadabiertarecoletauar/@TrackLink">
+        </mj-image>
+      </mj-column>
+      <mj-column vertical-align="middle" width="19%" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0">
+        <mj-image src="https://correos.uar.cl/uploads/x_icon_internal.png" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0" width="40px" height="auto" href="https://twitter.com/UdeRecoleta@TrackLink">
+        </mj-image>
+      </mj-column>
+      <mj-column vertical-align="middle" width="19%" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0">
+        <mj-image src="https://correos.uar.cl/uploads/linkedin_icon_internal.png" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0" width="32px" height="auto" href="https://www.linkedin.com/company/universidad-abierta-de-recoleta/@TrackLink">
+        </mj-image>
+      </mj-column>
+      <mj-column vertical-align="middle" width="19%" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0">
+        <mj-image src="https://correos.uar.cl/uploads/instagram_icon_internal.png" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0" width="32px" height="auto" href="https://www.instagram.com/uderecoleta/@TrackLink">
+        </mj-image>
+      </mj-column>
+      <mj-column vertical-align="middle" width="22%" padding-top="0" padding-right="12px" padding-bottom="0"  padding-left="0">
+        <mj-image src="https://correos.uar.cl/uploads/youtube_icon_internal.png" padding-top="0" padding-right="0" padding-bottom="0"  padding-left="0" width="32px" height="auto" href="https://www.youtube.com/c/UniversidadAbiertadeRecoleta@TrackLink">
+        </mj-image>
+      </mj-column>
+    </mj-group>
+  </mj-section> `,
+    });
 
 };

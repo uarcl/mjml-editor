@@ -20,7 +20,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
         copyable: false,
         removable: false,
         highlightable: false,
-        'style-default': { 'width': '600px' },
+        'style-default': { 'width': '600px' ,'background-color':'#f9fafc'},
         stylable: [ 'width', 'background-color' ],
       },
     },

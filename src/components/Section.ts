@@ -24,6 +24,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: any) => {
           'padding-top': '10px',
           'padding-bottom': '10px',
           'text-align': 'center',
+          'background-color':'#fff',
         },
         stylable: [
           'text-align',
